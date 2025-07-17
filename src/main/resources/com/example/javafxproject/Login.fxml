@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="app.controller.HelloController">
+
+   <left>
+      <AnchorPane depthTest="ENABLE" prefHeight="500.0" prefWidth="285.0" style="-fx-background-color: #624E88;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="179.0" fitWidth="168.0" layoutX="59.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../../Logo.png" />
+               </image></ImageView>
+            <Text fill="#e6d9a2" layoutX="68.0" layoutY="301.0" strokeType="OUTSIDE" strokeWidth="0.0" text="PREPVERSE" wrappingWidth="149.1328125">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+            </Text>
+         </children>
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX" height="0.0" radius="4.165" width="18.66" />
+         </effect></AnchorPane>
+   </left>
+   <center>
+      <AnchorPane prefHeight="500.0" prefWidth="421.0" BorderPane.alignment="CENTER">
+         <children>
+            <PasswordField fx:id="passwordField" layoutX="85.0" layoutY="271.0" prefHeight="26.0" prefWidth="243.0" promptText="Password" />
+            <TextField fx:id="usernameField" layoutX="85.0" layoutY="223.0" prefHeight="26.0" prefWidth="243.0" promptText="Username" />
+            <Text layoutX="158.0" layoutY="184.0" strokeType="OUTSIDE" strokeWidth="0.0" text="LOG IN">
+               <font>
+                  <Font name="Arial Bold" size="28.0" />
+               </font>
+            </Text>
+            <Text fill="#00000038" layoutX="166.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="New here ?">
+               <font>
+                  <Font name="Arial" size="10.0" />
+               </font>
+            </Text>
+            <Text onMouseClicked="#switchToSignUp"  fill="#00000038" layoutX="222.0" layoutY="448.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign up">
+               <font>
+                  <Font name="Arial Bold" size="11.0" />
+               </font>
+               <effect>
+                  <Glow />
+               </effect>
+            </Text>
+            <ButtonBar layoutX="163.0" layoutY="366.0" prefHeight="14.0" prefWidth="86.0">
+              <buttons>
+                <Button mnemonicParsing="false" onAction="#handleLogin" text="Log in" />
+              </buttons>
+            </ButtonBar>
+            <Label fx:id="messageLabel" layoutX="167.0" layoutY="341.0"  />
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
